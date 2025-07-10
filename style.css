@@ -1,0 +1,116 @@
+/*System-things*/
+html, body {
+    overflow: auto;
+    scrollbar-width: none;           /* Firefox */
+    -ms-overflow-style: none;        /* IE 10+ */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;                   /* Chrome, Safari, Edge */
+}
+
+/*System-things-close */
+
+
+body {
+    background-image: url('bg.png');
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    font-family: "Jersey 10", sans-serif;
+    margin: 0;
+    color: #fff;
+    /*overflow: hidden;*/
+}
+
+/*header*/
+header {
+    background: #0017AE;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: #be133a;
+}
+
+/*header-close*/
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    letter-spacing: 5px;
+}
+
+/*footer*/
+
+footer {
+    background: #0017AE;
+    padding: 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    transform: scaleY(-1);
+    box-sizing: border-box;
+}
+
+/*footer-close*/
+
+#left_side, #right_side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10em 3em;
+}
+
+#left_side a, #right_side a {
+    color: #fff;
+    background: rgba(0, 23, 174, 0.7);
+    text-decoration: none;
+    margin: 1em 0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1.5em;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#left_side a:hover, #right_side a:hover {
+    background: #be133a;
+    color: #000000;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.9);
+
+}
+
+.main-episode-container {
+    display: flex;
+    justify-content: center;
+    gap: 30%;
+}
+
