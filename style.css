@@ -1,13 +1,13 @@
 /*System-things*/
 html, body {
     overflow: auto;
-    scrollbar-width: none;           /* Firefox */
-    -ms-overflow-style: none;        /* IE 10+ */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
 }
 
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-    display: none;                   /* Chrome, Safari, Edge */
+    display: none; /* Chrome, Safari, Edge */
 }
 
 /*System-things-close */
@@ -22,12 +22,14 @@ body {
     font-family: "Jersey 10", sans-serif;
     margin: 0;
     color: #fff;
+    font-size: clamp(1rem, 1.2vw, 1.5rem); /* auto-resizes */
+
     /*overflow: hidden;*/
 }
 
 /*header*/
 header {
-    background: #0017AE;
+    background: rgba(0, 23, 143, 0.6);
     padding: 20px;
     margin-bottom: 30px;
     border-bottom-left-radius: 30px;
@@ -59,14 +61,22 @@ nav ul li a:hover {
 
 h1 {
     font-size: 3em;
-    margin: 0;
+    margin: 0em;
     letter-spacing: 5px;
+}
+h2 {
+    font-size: 2em;
+    letter-spacing: 3px;
+}
+h3 {
+    font-size:1em;
+    letter-spacing: 1px;
 }
 
 /*footer*/
 
 footer {
-    background: #0017AE;
+    background: rgba(0, 23, 143, 0.6);
     padding: 20px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -81,36 +91,3 @@ footer {
 }
 
 /*footer-close*/
-
-#left_side, #right_side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10em 3em;
-}
-
-#left_side a, #right_side a {
-    color: #fff;
-    background: rgba(0, 23, 174, 0.7);
-    text-decoration: none;
-    margin: 1em 0;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 1.5em;
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-#left_side a:hover, #right_side a:hover {
-    background: #be133a;
-    color: #000000;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.9);
-
-}
-
-.main-episode-container {
-    display: flex;
-    justify-content: center;
-    gap: 30%;
-}
-

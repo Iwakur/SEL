@@ -1,0 +1,35 @@
+/* Main content */
+
+#left_side, #right_side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10em 3em;
+}
+
+#left_side a, #right_side a {
+    color: #fff;
+    background: rgba(0, 23, 174, 0.7);
+    text-decoration: none;
+    margin: 1em 0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1.5em;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#left_side a:hover, #right_side a:hover {
+    background: #be133a;
+    color: #000000;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.9);
+
+}
+
+.main-episode-container {
+    display: flex;
+    justify-content: center;
+    gap: 30%;
+}
+
+/* Main content close */
