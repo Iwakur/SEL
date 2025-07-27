@@ -33,8 +33,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 13em; /* Fixed width for mini-box */
-    height: 13em; /* Fixed height for mini-box */
+    width: 15em; /* Fixed width for mini-box */
+    height:auto; /* Fixed height for mini-box */
     margin: 10px;
     padding: 10px;
     border-radius: 15px;
@@ -46,15 +46,77 @@ body {
 /*    font-size: 1000px;*/
 /*}*/
 
+.glitch-text {
+    color: #7b7bff;
+}
+
+
+
+
+
+
+
+
+
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 30px #f0f;
+    max-width: 90%;
+}
+
+.popup video {
+    width: 100%;
+    height: auto;
+}
+
+.quote-popup {
+    color: #ccc;
+    cursor: pointer;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.close-btn {
+    color: #f0f;
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* Main content close */
 /* Timeline */
 .timeline {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 1.5em;
     padding: 10px 0;
     overflow-x: auto; /* Scrollable if needed */
-    border-top: 2px solid #ccc;
 }
 
 .episode-node {
@@ -63,22 +125,21 @@ body {
     background-color: #333;
     color: white;
     font-family: monospace;
-    width: 40px;
-    height: 40px;
+    min-width: 2em;
+    width: auto;
+    height: auto;
     text-align: center;
-    line-height: 40px;
+    line-height: 2em;
     border: 2px solid #999;
     transition: 0.3s;
-    cursor: pointer;
+    text-decoration: none;
+    aspect-ratio: 1/1; /* or 1 / 1 for square */
 }
 
-.episode-node.active {
-    background-color: #ff0044; /* Highlight current/visited */
-    border-color: #fff;
-}
+
 
 .episode-node:hover {
-    background-color: #ff0044; /* Highlight on hover */
+    background-color: rgba(255, 0, 0, 0.5); /* Highlight on hover */
     border-color: #fff;
 }
 

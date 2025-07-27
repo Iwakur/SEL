@@ -17,18 +17,32 @@
     <div id="episode-container">
         <div class="mini-box">
             <h2>Summary</h2>
-            <p>Lain gets mysterious emails from Chisa,
+            <p><span class="glitch-text">Lain</span> gets mysterious emails from <span
+                    class="glitch-text">Chisa Yomoda</span>,
                 a girl who just died. Strange things begin to happen.
-                The Wired calls her.</p>
+                <span class="glitch-text">The Wired </span>calls her.</p>
         </div>
         <div class="mini-box">
             <h2>Key Theme</h2>
-            <h3>Loneliness & Connection</h3>
+            <h3><span class="glitch-text">Loneliness & Connection </span></h3>
             <p> Lain’s world is quiet. Her real life feels empty, but the Wired offers something more...</p>
         </div>
         <div class="mini-box">
             <h2>Moment</h2>
-            <h3>"📺 “God is here.”</h3>
+            <h3>"”</h3>
+            <h3 class="quote-popup" id="quote1">📺 “God is here.
+            </h3>
+
+            <!-- Hidden popup -->
+            <div class="popup" id="popup1">
+                <div class="popup-content">
+                    <span class="close-btn">&times;</span>
+                    <video controls autoplay muted>
+                        <source src="video/lain_clip.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
             <p> — from Chisa’s email"</p>
         </div>
     </div>
@@ -36,12 +50,12 @@
 
 
 <div class="timeline">
-    <div class="episode-node active">I</div>
-    <div class="episode-node active">II</div>
-    <div class="episode-node active">III</div>
-    <div class="episode-node">IV</div>
-    <div class="episode-node">V</div>
-    <!-- ... until XIII -->
+    <a href="../index.html" class="episode-node">N</a>
+    <a href="Episode1.html" class="episode-node">I</a>
+    <a href="Episode2.html" class="episode-node">II</a>
+    <a href="Episode3.html" class="episode-node">III</a>
+    <a href="Episode4.html" class="episode-node">IV</a>
+    <a href="Episode5.html" class="episode-node">V</a>
 </div>
 
 

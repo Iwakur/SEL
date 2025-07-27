@@ -22,10 +22,19 @@ body {
     font-family: "Jersey 10", sans-serif;
     margin: 0;
     color: #fff;
+    transition: background-color 0.3s, color 0.3s;
     font-size: clamp(1rem, 1.2vw, 1.5rem); /* auto-resizes */
 
     /*overflow: hidden;*/
 }
+
+
+body.dark {
+    /*background-image: url('bg_dark.png');*/
+    background-color: rgba(238, 238, 238, 0.8);
+    color: #000000;
+}
+
 
 /*header*/
 header {
@@ -61,16 +70,30 @@ nav ul li a:hover {
 
 h1 {
     font-size: 3em;
-    margin: 0em;
+    margin: 0px;
+    padding: 0px;
     letter-spacing: 5px;
 }
 h2 {
     font-size: 2em;
     letter-spacing: 3px;
+    margin-bottom: 5px;
+    padding: 0px;
+
+
 }
 h3 {
-    font-size:1em;
+    font-size:1.5em;
     letter-spacing: 1px;
+    margin : 0px;
+    padding: 0px;
+
+}
+
+p{
+    font-size: 1.2em;
+    margin: 0px;
+    padding: 0px;
 }
 
 /*footer*/
