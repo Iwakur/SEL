@@ -91,18 +91,76 @@ function stopGlitching(el) {
 }
 
 function attachHoverListeners() {
+    console.log("Attaching hover listeners");
+    const start_b = document.getElementById('start-button');
+    const welcome = document.getElementById('welcome-screen');
+    const video = document.getElementById('popup-video');
     document.querySelectorAll('.glitch-text').forEach(el => {
         el.addEventListener('mouseenter', () => {
             startGlitching(el);
             document.body.classList.add('dark');
+            if (el.classList.contains('quote-popup')) {
+                const popup = document.getElementById('popup1'); // or use el.dataset.popupId if more
+                popup.style.display = 'flex';
+                video.currentTime = 0;
+                video.volume = 0.5;
+
+                video.play().catch(err => {
+                    console.warn("Video playback blocked:", err);
+                });
+            }
         });
 
         el.addEventListener('mouseleave', () => {
             stopGlitching(el);
             document.body.classList.remove('dark');
+            if (el.classList.contains('quote-popup')) {
+                const popup = document.getElementById('popup1'); // or use el.dataset.popupId if more
+                popup.style.display = 'none';
+                video.stop()
+                video.volume = 0;
+
+            }
+            el.addEventListener('mouseenter', () => {
+                console.log("Hovered:", el); // see if this logs
+
+            });
         });
+
+
+
     });
+
+    // document.querySelectorAll('.quote-popup').forEach(el => {
+    //     el.addEventListener('mouseenter', () => {
+    //         startGlitching(el);
+    //         document.body.classList.add('dark');
+    //     });
+    //
+    // });
+
+    start_b.addEventListener('click', () => {
+        const music = document.getElementById('bg-music');
+        music.volume = 0.1;
+        music.play().catch(() => {});
+        setTimeout(() => {
+            welcome.classList.add('fade-out');
+        }, 500); // Start fade out after 1 second
+
+
+        // 3. After animation, hide welcome and show main
+        setTimeout(() => {
+            welcome.style.display = 'none';
+        }, 2000); // must match CSS transition duration
+
+    }, { once: true });
+
+
 }
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     includeHTML(() => {
